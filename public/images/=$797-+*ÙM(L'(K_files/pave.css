@@ -1,0 +1,30 @@
+.adn-pave {
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	text-align: center;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.adn-pave > div > div,
+.adn-pave > div > object,
+.adn-pave > div > img,
+.adn-pave > div > ins {
+	position: relative;
+	z-index: 2;
+}
+.adn-pave .adn-pave-fallback {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-position: center center;
+	background-size: 100%;
+	cursor: pointer;
+	z-index: 1;
+}
+.adn-pave-link {
+	display:block;
+	z-index: 1;
+	position: relative;
+}

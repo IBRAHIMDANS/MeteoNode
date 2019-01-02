@@ -1,0 +1,14 @@
+
+<%- include header.ejs -%>
+<p class='btn-light d-flex justify-content-center h1'><span class="badge badge-pill badge-light">Bienvenue sur mon mini app Méteo</span></p>
+
+<div class="d-flex justify-content-center  ">
+<img src="images/meteo.jpg" alt="Meteo Logo" class="d-none" ><img>
+<form class="form-inline " action='/meteo/' method='post'>
+    <input class="form-control mr-sm-2" type="search" placeholder="Le nom de la ville dont vous voulez regarder la meteo" name ="City" required>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+</form>
+
+</div>
+
+<%- include footer.ejs -%>

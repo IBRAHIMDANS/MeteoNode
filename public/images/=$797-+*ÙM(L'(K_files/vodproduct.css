@@ -1,0 +1,76 @@
+@media screen and (min-width: 960px){
+    .showlist-product ul li {
+        width: 25%;
+    }
+}
+
+.showlist-product .adn-list-element {
+    box-shadow: none;
+}
+.showlist-product .adn-list-element-img {
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+}
+.showlist-product .adn-list-element-img img{
+    height: 145px;
+    display: inline-block;
+    vertical-align: bottom;
+    width: auto;
+}
+.showlist-product .adn-list-element-title {
+    background: none;
+    text-align: center;
+}
+.showlist-product .adn-list-element-title h3 {
+    color: inherit;
+    padding: 0;
+    height: 3.4em;
+    -webkit-line-clamp: 3;
+}
+.showlist-product .adn-list-element-title h3 span {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    font-weight: normal;
+}
+.showlist-price,
+.showlist-promoprice {
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 1.2em;
+}
+.showlist-price {
+    font-size: 0.9em;
+    text-decoration: line-through;
+    margin-right: 0.5em;
+}
+.showlist-promoprice {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.showlist-action {
+    text-align: center;
+}
+.showlist-button {
+    background-color: #0096FF;
+    border: 1px solid #0096FF;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+}
+.adn-list-element:hover .showlist-button {
+    color: #fff;
+}
+
+/*mobile*/
+@media only screen and (max-width: 580px) {
+    .showlist-price {
+        display: none;
+    }
+}

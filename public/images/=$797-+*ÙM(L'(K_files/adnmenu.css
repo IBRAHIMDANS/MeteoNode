@@ -1,0 +1,954 @@
+/* 2.5em */
+/*
+ * ADN MENU
+ */
+div.adn-absolute {
+  margin-bottom: 6.6em;
+}
+.adn-dnamenu {
+  width: 100%;
+  background-color: #0096FF;
+  font-size: 1em;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.adn-dnamenu li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+}
+/*
+ * FLEX BOX
+ */
+.adn-dnamenu-mainmenu,
+.adn-dnamenu-submenu ul,
+.adn-dnamenu-submenu li.adn-dnamenu-alphabet {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.adn-dnamenu-submenu li.adn-dnamenu-alphabet a {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+}
+.adn-dnamenu-submenu ul {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/*
+ * ADN MAIN MENU
+ */
+.adn-dnamenu-mainmenu {
+  width: 970px;
+  margin: 0 auto;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+.adn-dnamenu-mainmenu > li {
+  height: 6.6em;
+}
+.adn-dnamenu-mainmenu a {
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0 2em;
+  line-height: 6.6em;
+  height: 100%;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+}
+/*ADN submenu*/
+.adn-dnamenu-submenu {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #046191;
+  z-index: -2;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: 0.2s 0.2s -webkit-transform ease;
+  -moz-transition: 0.2s 0.2s -moz-transform ease;
+  -ms-transition: 0.2s 0.2s -ms-transform ease;
+  transition: 0.2s 0.2s transform ease;
+}
+.adn-dnamenu-submenu .loading {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.2em;
+}
+.adn-dnamenu-submenu ul {
+  width: 970px;
+  margin: 0 auto;
+  padding: 0;
+}
+.adn-dnamenu-submenu ul.yui3-aclist-list {
+  width: 100%;
+}
+.adn-dnamenu-submenu li {
+  padding: 1.6em 0 1em 0;
+}
+.adn-dnamenu-submenu li:last-child a {
+  border-right: none;
+}
+.adn-dnamenu-submenu a {
+  padding: 0 2.5em;
+  line-height: 2.7em;
+  border-right: 1px solid white;
+  font-size: 1.05em;
+}
+.adn-dnamenu-account a {
+  padding: 0 1.2em;
+}
+/*show submenu class*/
+.adn-dnamenu-mainmenu > li.adn-dnamenu-actif .adn-dnamenu-submenu {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: 0.2s -webkit-transform ease;
+  -moz-transition: 0.2s -moz-transform ease;
+  -ms-transition: 0.2s -ms-transform ease;
+  transition: 0.2s transform ease;
+  z-index: -1;
+}
+.adn-dnamenu-mainmenu > li.adn-dnamenu-actif.adn-dnamenu-hide .adn-dnamenu-submenu {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.adn-dnamenu-mainmenu > li.adn-dnamenu-actif .adn-dnamenu-triangle {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.adn-dnamenu-mainmenu > li.adn-dnamenu-actif.adn-dnamenu-hide .adn-dnamenu-triangle {
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+}
+/*link over (and active and focus)*/
+.adn-dnamenu-mainmenu a:active,
+.adn-dnamenu-mainmenu a:focus,
+.adn-dnamenu-mainmenu a:hover {
+  color: white;
+  text-decoration: none;
+}
+.adn-dnamenu-mainmenu > li > a:hover,
+.adn-dnamenu-mainmenu > li.adn-dnamenu-actif > a {
+  color: #064056;
+}
+.adn-dnamenu-mainmenu > li.adn-dnamenu-hide > a:hover,
+.adn-dnamenu-mainmenu > li.adn-dnamenu-actif.adn-dnamenu-hide > a {
+  color: white;
+}
+.adn-dnamenu-mainmenu > li.adn-dnamenu-logo > a:hover {
+  background: none;
+}
+.adn-dnamenu-submenu li {
+  overflow: hidden;
+}
+.adn-dnamenu-submenu li.adn-dnamenu-search {
+  overflow: visible;
+}
+.adn-dnamenu-submenu li a {
+  position: relative;
+}
+.adn-dnamenu-submenu li a > span,
+.adn-dnamenu .adn-dnamenu-logout button > span {
+  position: relative;
+  z-index: 1;
+}
+.adn-dnamenu-submenu li a > span.adn-dnamenu-hover,
+.adn-dnamenu .adn-dnamenu-logout button > span.adn-dnamenu-hover {
+  display: block;
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2.65em;
+  margin-left: -2.65em;
+  height: 5.3em;
+  width: 5.3em;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.7s -webkit-transform ease;
+  -moz-transition: 0.7s -moz-transform ease;
+  -ms-transition: 0.7s -ms-transform ease;
+  transition: 0.7s transform ease;
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+  border-radius: 100%;
+}
+.adn-dnamenu-submenu li.adn-dnamenu-alphabet a .adn-dnamenu-hover {
+  -webkit-transition: 0.3s -webkit-transform ease;
+  -moz-transition: 0.3s -moz-transform ease;
+  -ms-transition: 0.3s -ms-transform ease;
+  transition: 0.3s transform ease;
+}
+.adn-dnamenu .adn-dnamenu-logout button:hover .adn-dnamenu-hover,
+.adn-dnamenu-submenu li a:hover .adn-dnamenu-hover {
+  opacity: 0.6;
+  -webkit-transform: scale(3, 3);
+  -moz-transform: scale(3, 3);
+  -ms-transform: scale(3, 3);
+  transform: scale(3, 3);
+  -webkit-animation: submenuhover 0.7s;
+  /* Chrome, Safari, Opera */
+  -moz-animation: submenuhover 0.7s;
+  -ms-animation: submenuhover 0.7s;
+  animation: submenuhover 0.7s;
+}
+.adn-dnamenu-submenu li.adn-dnamenu-alphabet a:hover .adn-dnamenu-hover {
+  -webkit-transform: scale(0.7, 0.7);
+  -moz-transform: scale(0.7, 0.7);
+  -ms-transform: scale(0.7, 0.7);
+  transform: scale(0.7, 0.7);
+  -webkit-animation: submenuhover 0.3s;
+  /* Chrome, Safari, Opera */
+  -moz-animation: submenuhover 0.3s;
+  -ms-animation: submenuhover 0.3s;
+  animation: submenuhover 0.3s;
+}
+/*
+ * Animation
+ */
+@-webkit-keyframes submenuhover {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@-moz-keyframes submenuhover {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@keyframes submenuhover {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+/*other class for ADN Menu*/
+.adn-dnamenu-linkwithseparator {
+  margin-right: -1px;
+}
+.adn-dnamenu-linkwithseparator:after {
+  content: "";
+  height: 64%;
+  height: calc(100% -  2.4em );
+  top: 1.2em;
+  right: 0;
+  width: 1px;
+  background-color: #046191;
+  z-index: 1;
+  display: block;
+  position: absolute;
+}
+.adn-dnamenu-empty {
+  border: none;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.adn-dnamenu-logo {
+  border-right: none;
+}
+.adn-dnamenu-logo img {
+  height: 5.3em;
+  margin-top: 0.7em;
+  width: auto;
+}
+.adn-dnamenu-logo a {
+  padding: 0 1.2em;
+  font-size: 1em;
+  line-height: 1em;
+}
+.adn-dnamenu-logo h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1em;
+}
+.adn-dnamenu-logo h1 span {
+  font-size: 1em;
+  line-height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  text-indent: -9999px;
+  margin: 0;
+  padding: 0;
+}
+.adn-dnamenu-onlylogo > a {
+  padding: 0 1.2em;
+}
+.adn-dnamenu a span[data-icon] {
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.2em;
+  font-weight: 400;
+}
+.adn-dnamenu-triangle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 0;
+  width: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #046191;
+  margin-bottom: 0;
+  margin-left: -10px;
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+  -webkit-transition: 0.2s opacity ease, 0.2s -webkit-transform ease;
+  -moz-transform: translateY(10px);
+  -moz-transition: 0.2s opacity ease, 0.2s -moz-transform ease;
+  -ms-transform: translateY(10px);
+  -ms-transition: 0.2s opacity ease, 0.2s -ms-transform ease;
+  transform: translateY(10px);
+  transition: 0.2s opacity ease, 0.2s transform ease;
+}
+.adn-dnamenu-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0096FF;
+}
+.adn-dnamenu-alphabet {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.adn-dnamenu-alphabet a {
+  padding: 0 0.2em;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.adn-dnamenu-alphabet a:first-child {
+  margin-left: 2.3em;
+}
+.adn-dnamenu-alphabet a:last-child {
+  margin-right: 1em;
+}
+.adn-dnamenu-account img {
+  display: inline-block;
+  height: 2em;
+  vertical-align: top;
+  margin-top: 2.1em;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #0096FF;
+  margin-left: 0.2em;
+}
+.adn-dnamenu-account:hover img,
+.adn-dnamenu-account.adn-dnamenu-actif img {
+  background-color: #046191;
+  border-color: #046191;
+}
+.adn-dnamenu-label {
+  margin-left: 0.2em;
+}
+.adn-dnamenu-offer {
+  background-color: #D01C24;
+}
+/* LOGIN POPUP*/
+.spopup .adn-input-small {
+  max-width: 100%;
+}
+/* SEARCH */
+.adn-dnamenu-search {
+  width: 100%;
+}
+.adn-dnamenu-search .search {
+  margin: 0;
+  padding: 0 1.2em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.adn-dnamenu-search .adn-search-input {
+  margin: 0;
+  padding: 0;
+  line-height: 2.7em;
+  height: 2.7em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  background-color: transparent;
+  color: white;
+}
+.adn-dnamenu-search .adn-search-input::before {
+  font-size: 2em;
+  margin: 0;
+  position: absolute;
+  display: block;
+  top: 50%;
+  /*left: 0.5em;*/
+  left: 0;
+  margin-top: -0.5em;
+}
+.adn-dnamenu-search .adn-search-input input {
+  font-size: 2em;
+  padding: 0 0.25em 0 1.5em;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  color: white;
+}
+.adn-dnamenu-search li.yui3-aclist-item {
+  padding: 0 1em;
+}
+/*
+ * FORM
+ */
+.adn-dnamenu-account ul.login-form-inline-inputs {
+  padding: 1.6em 0 1em 0;
+}
+.adn-dnamenu-account ul.login-form-inline-help {
+  padding: 0 0 1em 0;
+}
+.adn-dnamenu-account.with-captcha ul.login-form-inline-help {
+  margin-top: -3em;
+}
+.adn-dnamenu-submenu .login-form-inline-help ul {
+  margin: 0;
+  width: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.adn-dnamenu-account ul.login-form-inline-help li {
+  padding: 0 1.2em;
+}
+.adn-dnamenu-submenu .login-form-inline-help a {
+  font-size: 0.8em;
+  min-width: 130px;
+  border-right: 0;
+  padding: 0;
+}
+.adn-dnamenu-submenu .login-form-inline-help a:hover {
+  text-decoration: underline;
+}
+.login-form-inline-inputs li {
+  margin: 0 0.4em 0.8em 0.4em;
+  padding: 0;
+}
+.login-form-inline-inputs li:first-child {
+  margin-left: 1.2em;
+}
+.login-form-inline-inputs li span {
+  line-height: 2em;
+}
+.login-form-inline-inputs li input {
+  padding: 0 0.5em;
+  line-height: 1em;
+  height: 2em;
+  font-size: 1em;
+  background-color: white;
+  border: none;
+  width: 150px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.login-form-inline-inputs button,
+.login-form-inline-inputs .button {
+  line-height: 2em;
+  height: 2em;
+  border: none;
+  padding: 0 0.8em;
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 0;
+  font-weight: 400;
+  font-size: 1em;
+}
+.login-form-inline-inputs .login-form-inline-createaccount .button,
+.login-form-inline-inputs .login-form-inline-createaccount .button:hover {
+  background-color: #ec7023;
+  color: white;
+}
+.login-form-inline-inputs .button {
+  padding-left: 2em;
+}
+.login-form-inline-inputs .button span[data-icon] {
+  line-height: 1em;
+  font-size: 1em;
+}
+/*
+ * LOGOUT BUTTON
+ */
+.adn-dnamenu .adn-dnamenu-logout button,
+.adn-dnamenu .adn-dnamenu-logout button:hover {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1em;
+  font-weight: 400;
+  width: auto;
+  line-height: 2.7em;
+  height: 2.7em;
+  padding: 0 1.2em;
+  box-shadow: none;
+  min-width: 0;
+}
+/*
+ * OFFER BANNER
+ */
+.adn-dnamenu-mainoffer-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: -3;
+  left: 0;
+  height: 2em;
+  line-height: 2em;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(0);
+  background-color: #ec7023;
+}
+.adn-dnamenu-mainoffer-mobile a {
+  height: 100%;
+  display: block;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+}
+.adn-dnamenu-mainoffer-mobile a:hover,
+.adn-dnamenu-mainoffer-mobile a:link,
+.adn-dnamenu-mainoffer-mobile a:active,
+.adn-dnamenu-mainoffer-mobile a:visited {
+  color: white;
+  text-decoration: none;
+}
+.adn-dnamenu-mainoffer-mobile-price,
+.adn-dnamenu-mainoffer-mobile-text {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: normal;
+  position: relative;
+  top: 50%;
+  margin-top: -0.5em;
+}
+.adn-dnamenu-mainoffer-mobile-text {
+  text-transform: uppercase;
+}
+.adn-dnamenu-mainoffer-mobile-price {
+  font-size: 1.4em;
+}
+.adn-dnamenu-mainoffer-mobile-price small {
+  font-size: 0.5em;
+}
+.adn-dnamenu-mainoffer-mobile:hover .adn-dnamenu-mainoffer-mobile-price {
+  -webkit-transform: translateX(4px);
+  -moz-transform: translateX(4px);
+  transform: translateX(4px);
+}
+.adn-dnamenu-mainoffer-mobile:hover .adn-dnamenu-mainoffer-mobile-text {
+  -webkit-transform: translateX(-2px);
+  -moz-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+.adn-dnamenu .adn-dnamenu-mainoffer-mobile a span[data-icon] {
+  font-size: 3em;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  margin-top: -0.5em;
+  margin-left: -0.2em;
+  margin-right: -0.1em;
+}
+.adn-dnamenu-mainoffer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 100%;
+  background-color: #ec7023;
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  transform: translateX(10px);
+  padding-right: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.adn-dnamenu-mainoffer:hover {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+}
+.adn-dnamenu-mainoffer:after,
+.adn-dnamenu-mainoffer:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 99%;
+  height: 0;
+  width: 0;
+  border: 3.31em solid transparent;
+  border-top-color: #ec7023;
+  border-right-color: #ec7023;
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+  z-index: 1;
+}
+.adn-dnamenu-mainoffer:after {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  border-right-color: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+.adn-dnamenu-mainoffer:hover:after {
+  -webkit-transform: translateX(-4px);
+}
+.adn-dnamenu-mainoffer a {
+  display: block;
+  color: white;
+  height: 100%;
+  text-align: right;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-right: 0.4em;
+  padding-top: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: -2.4em;
+  z-index: 2;
+  position: relative;
+}
+.adn-dnamenu-mainoffer a:hover {
+  color: white;
+  text-decoration: none;
+}
+.adn-dnamenu-mainoffer-text {
+  font-size: 1.8em;
+  display: block;
+  font-weight: bold;
+}
+.adn-dnamenu-mainoffer-text span {
+  display: block;
+  font-size: 0.663em;
+  line-height: 1.1em;
+}
+.adn-dnamenu-mainoffer-text strong {
+  display: block;
+  line-height: 1.1em;
+}
+.adn-dnamenu-mainoffer-text small {
+  font-size: 0.4em;
+  line-height: 1.1em;
+  display: block;
+}
+.adn-dnamenu-mainoffer-price {
+  font-size: 2.4em;
+  line-height: 1em;
+  display: block;
+  letter-spacing: -0.07em;
+}
+.adn-dnamenu-mainoffer-price sup {
+  display: inline-block;
+  vertical-align: top;
+  font-size: .8em;
+  line-height: 1em;
+  margin-left: 0.2em;
+}
+.adn-dnamenu-mainoffer-price sub {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: .2em;
+  line-height: 1.8em;
+  letter-spacing: 0;
+  margin-left: -3.6em;
+}
+.adn-dnamenu a span[data-icon].icon-yatta {
+  font-size: 3em;
+  margin: 0 .1em;
+}
+.adn-dnamenu a span[data-icon].icon-yatta-mobile {
+  display: none;
+  font-size: 2.2em;
+  margin: 0 .136em;
+}
+@media screen and (max-width: 1320px) {
+  .adn-dnamenu-mainoffer-mobile {
+    display: block;
+  }
+  .adn-dnamenu-mainoffer {
+    display: none;
+  }
+}
+@media screen and (max-width: 979px) {
+  .adn-dnamenu-mainoffer-mobile {
+    height: 1.6em;
+    line-height: 1.6em;
+  }
+}
+/*
+ * RESPONSIVE
+ */
+/*Tablet and large mobile*/
+@media screen and (max-width: 979px) {
+  div.adn-absolute {
+    margin-bottom: 5.4em;
+  }
+  .adn-dnamenu-margin {
+    height: 1.6em;
+  }
+  .adn-dnamenu-mainmenu {
+    position: relative;
+  }
+  .adn-dnamenu-mainmenu > li {
+    height: 5.4em;
+  }
+  .adn-dnamenu-mainmenu a {
+    line-height: 5.4em;
+  }
+  .adn-dnamenu .adn-dnamenu-mainmenu,
+  .adn-dnamenu .adn-dnamenu-submenu ul {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .adn-dnamenu-mainmenu a {
+    padding: 0 1.2em;
+  }
+  .adn-dnamenu-logo img {
+    height: 3em;
+    margin-top: 1.2em;
+  }
+  .adn-dnamenu-submenu a,
+  .adn-dnamenu-logout button,
+  .adn-dnamenu-logout button:hover,
+  .adn-dnamenu .adn-dnamenu-logout button,
+  .adn-dnamenu .adn-dnamenu-logout button:hover {
+    line-height: 2em;
+    height: 2em;
+  }
+  .adn-dnamenu-lastsubmenu a {
+    border-right: none;
+  }
+  .adn-dnamenu-submenu li.adn-dnamenu-alphabet {
+    display: none;
+  }
+  .adn-dnamenu-search .adn-search-input {
+    height: 2em;
+    line-height: 2em;
+  }
+  .adn-dnamenu-alphabet a:first-child {
+    padding-left: 1.2em;
+  }
+  .adn-dnamenu-submenu {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  .adn-dnamenu-account img {
+    margin-top: 1.6em;
+  }
+  .adn-dnamenu-search .adn-search-input input {
+    font-size: 16px;
+    padding-left: 2.5em;
+  }
+  .adn-dnamenu-mainmenu > li > a:before {
+    height: 100%;
+    top: 0;
+  }
+  .login-form-inline-inputs li input {
+    font-size: 16px;
+    height: 1.6em;
+  }
+  .adn-dnamenu-account.with-captcha ul.login-form-inline-help {
+    margin-top: 0;
+  }
+}
+/*Tablet and medium mobile*/
+@media screen and (max-width: 780px) {
+  .adn-dnamenu-label {
+    display: none;
+  }
+  .adn-dnamenu-account ul.login-form-inline-inputs {
+    padding: 1.6em 1.2em 0 1.2em;
+  }
+  .adn-dnamenu-account ul.login-form-inline-inputs li {
+    margin: 0 0 0.8em 0;
+    width: 100%;
+    padding: 0;
+  }
+  .login-form-inline-inputs li.login-form-inline-createaccount,
+  .login-form-inline-inputs li.login-form-inline-submit {
+    width: 50%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .login-form-inline-inputs li.login-form-inline-createaccount {
+    padding-left: 0.6em;
+  }
+  .login-form-inline-inputs li.login-form-inline-submit {
+    padding-right: 0.6em;
+  }
+  .login-form-inline-inputs li.login-form-inline-or {
+    display: none;
+  }
+  .login-form-inline-inputs li input {
+    width: 100%;
+  }
+  .login-form-inline-inputs .button {
+    width: 100%;
+  }
+  .login-form-inline-inputs li:first-child {
+    margin-left: 0;
+  }
+  .adn-dnamenu-submenu .login-form-inline-help a {
+    min-width: 0;
+  }
+}
+/*Mobile*/
+@media screen and (max-width: 550px) {
+  .adn-dnamenu-submenu ul {
+    display: block;
+    padding: 1.6em 0 1em 0;
+  }
+  .adn-dnamenu-submenu li {
+    display: block;
+    padding: 0 1.2em;
+  }
+  .adn-dnamenu-submenu a,
+  .adn-dnamenu-submenu li:first-child a {
+    border-right: none;
+    padding: 0;
+  }
+  .adn-dnamenu a span[data-icon] {
+    margin: 0;
+  }
+  .adn-dnamenu-linkwithseparator:after {
+    display: none;
+  }
+  .adn-dnamenu-empty span {
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+    /*background-color: @c-submenu;*/
+  }
+  .login-form-inline-inputs li.login-form-inline-createaccount,
+  .login-form-inline-inputs li.login-form-inline-submit {
+    width: 100%;
+    padding: 0;
+  }
+  .adn-dnamenu-search .search {
+    padding: 0;
+  }
+  .adn-dnamenu .adn-dnamenu-logout button,
+  .adn-dnamenu .adn-dnamenu-logout button:hover {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+  }
+  .adn-dnamenu-submenu li a > span.adn-dnamenu-hover,
+  .adn-dnamenu .adn-dnamenu-logout button > span.adn-dnamenu-hover {
+    left: 0;
+    top: 0;
+    -webkit-transform-origin: 20% 20%;
+    -moz-transform-origin: 20% 20%;
+    -ms-transform-origin: 20% 20%;
+    transform-origin: 20% 20%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .adn-dnamenu-mainmenu > li > a,
+  .adn-dnamenu-mainmenu > li h1 > a {
+    padding: 0 0.6em;
+  }
+  .adn-dnamenu a span[data-icon].icon-yatta {
+    display: none;
+  }
+  .adn-dnamenu a span[data-icon].icon-yatta-mobile {
+    display: inline-block;
+  }
+}

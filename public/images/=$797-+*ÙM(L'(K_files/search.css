@@ -1,0 +1,73 @@
+.search {
+	margin-top: 4px;
+	margin-right: 10px;
+}
+.adn-search-input {
+	background-color: white;
+	margin: 0;
+	padding: 0 4px 0 6px;
+}
+.search-catalog,
+.search-catalog input  {
+	color: #0096FF;
+}
+.adn-search-input:before {
+	vertical-align: middle;
+	margin-right: -4px;
+}
+.adn-search-input input {
+	padding: 4px 6px;
+	margin: 0;
+	border: none;
+	background-color: transparent;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: textfield;
+}
+.adn-search-input:focus,
+.adn-search-input:focus input
+ {
+	background-color: #f2f2f2;
+}
+.adn-search-input input:focus {
+	outline: none;
+}
+/*YUI search list*/
+.yui3-aclist-hidden {
+	visibility: hidden;
+}
+.yui3-aclist {
+	position: absolute;
+	z-index: 1;
+}
+.yui3-aclist-content {
+	background-color: white;
+	color: #595959;
+	box-shadow: 0 4px 15px -4px #000;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #cbcbcb;
+	margin-top: 4px;
+}
+.yui3-aclist-list {
+	overflow: hidden;
+	margin: 0;
+}
+.yui3-aclist-item {
+	width: 100%;
+	padding: 4px 5px;
+	cursor: pointer;
+	font-weight: normal;
+	outline: none;
+}
+.yui3-aclist-item b {
+	font-weight: bold;
+}
+.yui3-aclist-item-hover {
+	background-color: #B2B2B2;
+	color: white;
+}
+.yui3-aclist-item-active {
+	background-color: #0096FF;
+	color: white;
+}

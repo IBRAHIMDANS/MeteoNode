@@ -1,0 +1,24 @@
+.share-button a {
+	font-size: 2em;
+	line-height: 1;
+	color: #0096FF;
+	text-decoration: none;
+}
+.share-button a:hover {
+	color: #0096FF;
+	opacity: 0.7;
+	text-decoration: none;
+}
+.share-button a:active {
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+.share-facebook {
+	background: url(facebook.png) no-repeat 0 0;
+	height: 24px;
+	width: 62px;
+	display: inline-block;
+}
+.share-facebook:hover {
+	background-position: -62px 0;
+}

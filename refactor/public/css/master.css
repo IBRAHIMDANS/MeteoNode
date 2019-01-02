@@ -1,0 +1,22 @@
+body{
+  background-color: #333;
+
+}
+h1 {
+  color: red;
+  text-align: center;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px
+}
+.btn {
+  padding-left: : 22px 0px 0px ;
+}
+p {
+  color: green;
+ text-align: center;
+ font-size: 22px;
+ font-family: Helvetica;
+}

@@ -1,0 +1,109 @@
+.adn-interstitiel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -250px;
+    z-index: 2999;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.adn-interstitiel-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 2998;
+}
+
+.adn-interstitiel a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.adn-interstitiel-content {
+    width: 100%;
+    height: 100%;
+}
+
+.adn-interstitiel-close-button {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    height: 24px;
+    width: 24px;
+    box-sizing: border-box;
+    line-height: 12px;
+    padding: 6px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.adn-interstitiel-content img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.adn-interstitiel-video {
+    position: absolute;
+}
+.adn-interstitiel-video video {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.adn-interstitiel-video-volume-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    padding: 0 5px 0 24px;
+    font-size: 12px;
+    line-height: 24px;
+    height: 24px;
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid black;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 1;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.adn-interstitiel-video-volume-button:hover {
+    background-color: white;
+}
+
+.adn-interstitiel-video-volume-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAwCAYAAAALiLqjAAABV0lEQVR4Ae2WNVKFQRCEcXc7Au4cAb8AN+AWOMRIjrtrBhHnwDOcEJcOOpja+v0f/HXVV/Vmt972byNREX2mhkAlUNWA+P0M3sEOKNc6/F3E/eCWa0+gLfThRCoHzHP9EZSEOpxYaYx7+yA6zOHSYBwk8XcmuOB+I7DVuwfkS14RV9zJ/Tk1A8atjCsZn2kbdDFOZfz8gw30H5H+SzbVr/2ZupsoJ5o00S8Vpol+sbMw0S3X+g0noogU1Ai2QDJw03CQz3SLybNLE6+JVubVIJmHCxPbUjFgloowJrFg3aXYPYDiMCbxNAlVrqMFyWDPNPnEuYgm7i1zNqiBaTLLtRbtpi9f/Kz62GJhUs3/povWGcLAPk/quH7oZPAmsTSwT8Z2rk1qzEVWJnH8qhqU5iLrZNSeiwrAnTTRnIt6Rfa+6ZlYl+si8bi2gIpGQJ3xTrZ8D78RfQCzzRbanHkBawAAAABJRU5ErkJggg==') no-repeat;
+    background-position: 0 0;
+
+}
+
+.adn-interstitiel-video-volume-button.volume-on:after {
+    background-position: 0 -24px;
+}

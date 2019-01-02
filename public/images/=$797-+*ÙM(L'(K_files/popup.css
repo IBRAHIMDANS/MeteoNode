@@ -1,0 +1,96 @@
+.spopup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 360px;
+	min-height: 300px;
+	margin-left: -180px;
+	margin-top: -150px;
+	font-size: 1em;
+	line-height: 1.2em;
+	background: #fff;
+	border: 1px solid #ccc;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 6px;
+	overflow: hidden;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-webkit-justify-content: space-between;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 9999;
+}
+.spopup-separator {
+	width: 100%;
+	height: 1px;
+	background: #ccc;
+}
+.spopup-header,
+.spopup-content,
+.spopup-footer {
+	padding: 10px 16px;
+}
+.spopup-header {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+}
+.spopup-footer {
+	text-align: right;
+	border-top: 1px solid #ccc;
+}
+a.spopup-button {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 5px 6px;
+	margin-left: 10px;
+	border-radius: 6px;
+	border: 1px solid #595959;
+	color: #595959;
+	text-decoration: none;
+	min-width: 80px;
+	text-align: center;
+}
+a.spopup-button:hover,
+a.spopup-button:active {
+	text-decoration: none;
+	background: #595959;
+	color: white;
+}
+a.spopup-button-ok {
+	border-color: #0096FF;
+	color: #0096FF;
+}
+a.spopup-button-ok:hover,
+a.spopup-button-ok:active {
+	background: #0096FF;
+}
+.spopup-background {
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+}
+
+.spopup .loading {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	margin-top: -0.5em;
+	text-align: center;
+}
+
+@media screen and (max-width: 360px) {
+	.spopup {
+		width: 100%;
+		left: 0;
+		margin-left: 0;
+	}
+}
