@@ -6,7 +6,7 @@
     "start": "nodemon ./bin/www --require @babel/register"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-register": "^6.26.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
